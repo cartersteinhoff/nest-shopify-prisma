@@ -23,9 +23,9 @@ HOST is the address your app is currently located at. Preferrably you are using 
 
 ## 3. Prisma Inital Migrations and ORM/Schema Generation
 ```
-prisma migrate dev --name init
+$ prisma migrate dev --name init
 
-prisma generate
+$ prisma generate
 ```
 ## 4. Running the app
 
