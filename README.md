@@ -20,7 +20,7 @@ HOST=
 
 ## 3. Prisma Inital Migrations and ORM/Schema Generation
 ```bash
-# creates initial migrations 
+# creates initial migration 
 $ prisma migrate dev --name init
 
 # creates Sessions table in DB and scaffolds ORM API
