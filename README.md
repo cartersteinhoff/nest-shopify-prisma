@@ -9,22 +9,21 @@ $ npm install
 ```
 
 ## 2. ENV (create .env file)
-```
-DATABASE_URL=
-
+```bash
+DATABASE_URL=""
 SHOPIFY_API_KEY=
-
 SHOPIFY_API_SECRET=
-
 HOST=
 
-HOST is the address your app is currently located at. Preferrably you are using a secure tunnel from localhost using something like NGROK.  
+# HOST is the address your app is currently located at. Preferrably you are using a secure tunnel from localhost using something like NGROK.  
 ```
 
 ## 3. Prisma Inital Migrations and ORM/Schema Generation
-```
+```bash
+# creates initial migrations 
 $ prisma migrate dev --name init
 
+# creates Sessions table in DB and scaffolds ORM API
 $ prisma generate
 ```
 ## 4. Running the app
