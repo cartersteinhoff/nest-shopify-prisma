@@ -1,4 +1,11 @@
-## Necessary ENV 
+## Prisma Inital Migrations and ORM/Schema Generation
+```
+prisma migrate dev --name init
+
+prisma generate
+```
+
+## Necessary ENV (create .env file)
 
 ```
 DATABASE_URL=
