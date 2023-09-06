@@ -1,6 +1,20 @@
+## Necessary ENV 
+
+```
+DATABASE_URL=
+
+SHOPIFY_API_KEY=
+
+SHOPIFY_API_SECRET=
+
+HOST=
+
+HOST is the address your app is currently located at. Preferrably you are using a secure tunnel from localhost using something like NGROK.  
+```
+
 ## Description
 
-Nest, Prisma, and Shopify Auth/Webhook MVP
+Nest, Prisma, and Shopify "Offline" Auth/Webhook MVP. 
 
 ## Installation
 
