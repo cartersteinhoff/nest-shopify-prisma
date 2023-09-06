@@ -1,12 +1,14 @@
-## Prisma Inital Migrations and ORM/Schema Generation
+## Description
+
+Nest, Prisma, and Shopify "Offline" Auth/Webhook MVP. 
+
+## 1. Installation
+
+```bash
+$ npm install
 ```
-prisma migrate dev --name init
 
-prisma generate
-```
-
-## Necessary ENV (create .env file)
-
+## 2. ENV (create .env file)
 ```
 DATABASE_URL=
 
@@ -19,17 +21,13 @@ HOST=
 HOST is the address your app is currently located at. Preferrably you are using a secure tunnel from localhost using something like NGROK.  
 ```
 
-## Description
-
-Nest, Prisma, and Shopify "Offline" Auth/Webhook MVP. 
-
-## Installation
-
-```bash
-$ npm install
+## 3. Prisma Inital Migrations and ORM/Schema Generation
 ```
+prisma migrate dev --name init
 
-## Running the app
+prisma generate
+```
+## 4. Running the app
 
 ```bash
 # development
