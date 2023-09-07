@@ -5,7 +5,6 @@ import {
   CurrentSession,
   UseShopifyAuth,
 } from '@nestjs-shopify/auth';
-
 import { Session } from '@shopify/shopify-api';
 
 @Controller()
@@ -14,8 +13,8 @@ export class AppController {
 
   @Get()
   @UseShopifyAuth(AccessMode.Offline)
-  getHello(@CurrentSession() session: Session): string {
+  getRoot(@CurrentSession() session: Session): string {
     console.log(session);
-    return this.appService.getHello();
+    return this.appService.getRoot();
   }
 }
