@@ -27,6 +27,8 @@ const storage = new PrismaSessionStorage(prisma);
     ConfigModule.forRoot({
       isGlobal: true,
     }),
+    // Module order registration is important
+    // 1. Register the Shopify Core Module
     ShopifyCoreModule.forRootAsync({
       useFactory: async (configService: ConfigService) => {
         return {
@@ -48,11 +50,13 @@ const storage = new PrismaSessionStorage(prisma);
       },
       inject: [ConfigService],
     }),
+    // 2. Register the Shopify Webhooks Module
     ShopifyWebhooksModule.forRootAsync({
       useFactory: () => ({
         path: '/shopify-webhooks',
       }),
     }),
+    // 3. Register the Shopify Auth Module
     ShopifyAuthModule.forRootAsyncOffline({
       imports: [AuthHandlerModule],
       useFactory: (afterAuthHandler: MyAuthHandler) => ({
